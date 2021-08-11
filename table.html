@@ -473,7 +473,6 @@
     <script>
       const celulas = document.querySelectorAll("td");
       for (let i = 0; i < celulas.length - 1; i++) {
-        // console.log(celulas[i].className + " ");
         celulas[i].addEventListener("click", tdClick, false);
         if (celulas[i].className == "") {
           celulas[i].classList.add("parede");
@@ -484,7 +483,6 @@
         let target = event.target;
         console.log(target.className);
         if (target.classList.contains("parede")) {
-          //target.classList.add("");
           target.classList.remove("parede");
         } else if (target.className == "") {
           target.classList.add("orc");
