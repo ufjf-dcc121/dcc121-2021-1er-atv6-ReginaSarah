@@ -468,6 +468,7 @@
         <td class="orc">O</td>
         <td class="tesouro">D</td>
         <td></td>
+        <td hidden></td>
       </tr>
     </table>
     <script>
@@ -481,7 +482,8 @@
 
       function tdClick(event) {
         let target = event.target;
-        console.log(target.className);
+        //console.log(target.className);
+
         if (target.classList.contains("parede")) {
           target.classList.remove("parede");
         } else if (target.className == "") {
@@ -489,11 +491,14 @@
           target.innerText = "O";
         } else if (target.classList.contains("orc")) {
           target.classList.add("tesouro");
+          target.innerText = "T";
           target.classList.remove("orc");
         } else if (target.classList.contains("tesouro")) {
           target.classList.add("parede");
           target.classList.remove("tesouro");
+          target.innerText = "";
         }
+
         console.log(target.className);
       }
     </script>
