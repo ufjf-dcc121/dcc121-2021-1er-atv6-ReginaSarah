@@ -486,6 +486,7 @@
           target.classList.remove("parede");
         } else if (target.className == "") {
           target.classList.add("orc");
+          target.innerText = "O";
         } else if (target.classList.contains("orc")) {
           target.classList.add("tesouro");
           target.classList.remove("orc");
