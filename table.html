@@ -483,6 +483,18 @@
       function tdClick(event) {
         let target = event.target;
         console.log(target.className);
+        if (target.classList.contains("parede")) {
+          //target.classList.add("");
+          target.classList.remove("parede");
+        } else if (target.className == "") {
+          target.classList.add("orc");
+        } else if (target.classList.contains("orc")) {
+          target.classList.add("tesouro");
+          target.classList.remove("orc");
+        } else if (target.classList.contains("tesouro")) {
+          target.classList.add("parede");
+          target.classList.remove("tesouro");
+        }
       }
     </script>
   </body>
