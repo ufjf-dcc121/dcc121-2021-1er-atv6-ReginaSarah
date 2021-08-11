@@ -466,17 +466,23 @@
         <td></td>
         <td></td>
         <td class="orc">O</td>
-        <td></td>
         <td class="tesouro">D</td>
+        <td></td>
       </tr>
     </table>
     <script>
       const celulas = document.querySelectorAll("td");
       for (let i = 0; i < celulas.length - 1; i++) {
         // console.log(celulas[i].className + " ");
+        celulas[i].addEventListener("click", tdClick, false);
         if (celulas[i].className == "") {
           celulas[i].classList.add("parede");
         }
+      }
+
+      function tdClick(event) {
+        let target = event.target;
+        console.log(target.className);
       }
     </script>
   </body>
